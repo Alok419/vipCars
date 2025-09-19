@@ -178,5 +178,27 @@
       </div>
     </footer>
   </div>
+
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DIj000000HJrn',
+				'github_messaging_setup',
+				'https://trailsignup-12200011f3f49e.my.site.com/ESWgithubmessagingsetup1758288954904',
+				{
+					scrt2URL: 'https://trailsignup-12200011f3f49e.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://trailsignup-12200011f3f49e.my.site.com/ESWgithubmessagingsetup1758288954904/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
+
