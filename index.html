@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VIPCars — Premium Car Rentals</title>
+  <meta name="description" content="VIPCars — luxury & premium car rentals. Test/demo site." />
+  <style>
+    :root{
+      --accent:#0f172a; /* dark navy */
+      --primary:#ff6b6b; /* coral */
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.06);
+      --card-bg: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071029 0%, #0b2540 100%);color:#e6eef8;line-height:1.45}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#ffb86b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#081226}
+    nav a{color:rgba(230,238,248,0.9);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero h1{font-size:40px;margin:0 0 14px;color:#fff}
+    .hero p{color:var(--muted);margin:0 0 22px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--primary);color:#081226}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#e6eef8}
+
+    .search-card{background:rgba(255,255,255,0.03);padding:18px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .field{display:flex;gap:8px;margin-bottom:10px}
+    .field input, .field select{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0}
+    .card{background:var(--card-bg);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card img{width:100%;border-radius:8px;height:160px;object-fit:cover}
+    .card h4{margin:10px 0 6px}
+    .muted{color:var(--muted);font-size:14px}
+
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{flex:1;background:var(--glass);padding:12px;border-radius:10px;text-align:center}
+
+    footer{padding:30px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:40px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(1,1fr)}
+    }
+
+    /* small animation */
+    .logo{transform:translateZ(0);transition:transform .3s ease}
+    .logo:hover{transform:scale(1.06)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">V</div>
+        <div>
+          <div style="font-weight:800">VIPCars</div>
+          <div class="muted" style="font-size:12px">Luxury car rentals</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#fleet">Fleet</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Drive the extraordinary — premium cars for every occasion</h1>
+        <p>VIPCars offers a hand-picked fleet of luxury vehicles with chauffeur or self-drive options. Perfect for weddings, corporate travel, or a weekend of style.</p>
+        <div class="cta">
+          <button class="btn btn-primary">Book Now</button>
+          <button class="btn btn-ghost">View Fleet</button>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div style="font-weight:700">24/7 Support</div>
+            <div class="muted">Always available</div>
+          </div>
+          <div class="feature">
+            <div style="font-weight:700">Airport Meet</div>
+            <div class="muted">Punctual pickup</div>
+          </div>
+          <div class="feature">
+            <div style="font-weight:700">Transparent Pricing</div>
+            <div class="muted">No hidden fees</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="search-card">
+        <h3 style="margin-top:0">Quick Booking</h3>
+        <div class="field"><input type="text" placeholder="Pick-up city"/></div>
+        <div class="field"><input type="date"/><input type="date"/></div>
+        <div class="field"><select><option>Self-drive</option><option>Chauffeur</option></select></div>
+        <div style="display:flex;gap:8px"><button class="btn btn-primary" style="flex:1">Search</button><button class="btn btn-ghost">Call Us</button></div>
+      </aside>
+    </section>
+
+    <section id="fleet">
+      <h2 style="margin-bottom:6px">Featured Fleet</h2>
+      <p class="muted">A selection from our premium collection</p>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1541447275281-0f8a26a63f45?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="car">
+          <h4>Mercedes S-Class</h4>
+          <div class="muted">Chauffeur / Self-drive • ₹12,000 / day</div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="car">
+          <h4>BMW 7 Series</h4>
+          <div class="muted">Chauffeur • ₹13,500 / day</div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="car">
+          <h4>Audi A8</h4>
+          <div class="muted">Self-drive • ₹11,000 / day</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+        <div style="flex:1;min-width:240px;" class="card">
+          <h4>Hourly Rentals</h4>
+          <p class="muted">Short trips, city tours or hourly chauffeur service.</p>
+        </div>
+        <div style="flex:1;min-width:240px;" class="card">
+          <h4>Airport Transfers</h4>
+          <p class="muted">Meet & greet, real-time flight tracking and on-time pickup.</p>
+        </div>
+        <div style="flex:1;min-width:240px;" class="card">
+          <h4>Event Packages</h4>
+          <p class="muted">Wedding cars, corporate fleets and multi-day bookings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:280px" class="card">
+          <h4>Get in touch</h4>
+          <p class="muted">Email: hello@vipcars.example • Phone: +91 98765 43210</p>
+          <form style="margin-top:12px">
+            <div class="field"><input placeholder="Your name" required/></div>
+            <div class="field"><input placeholder="Email or phone" required/></div>
+            <div class="field"><textarea placeholder="Message" style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:inherit"></textarea></div>
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </div>
+
+        <div style="flex:1;min-width:280px" class="card">
+          <h4>Location</h4>
+          <p class="muted">123 Luxury Lane, Midtown, New Delhi</p>
+          <div style="height:200px;background:linear-gradient(180deg,#081226,#053046);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Map placeholder</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center">
+        <div>
+          <strong>VIPCars</strong>
+          <div class="muted">© VIPCars — Demo site</div>
+        </div>
+        <div class="muted">Designed for demo — built with ❤️</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
